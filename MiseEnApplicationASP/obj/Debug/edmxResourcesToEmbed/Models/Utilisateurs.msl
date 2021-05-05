@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MiseApplicationLearningModelStoreContainer" CdmEntityContainer="MiseApplicationLearningEntities">
+    <EntitySetMapping Name="Utilisateurs">
+      <EntityTypeMapping TypeName="MiseApplicationLearningModel.Utilisateurs">
+        <MappingFragment StoreEntitySet="Utilisateurs">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Prenom" ColumnName="Prenom" />
+          <ScalarProperty Name="Nom" ColumnName="Nom" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

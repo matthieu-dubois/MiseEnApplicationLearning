@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Membre de la Famille";
+}
+
+@using GridMvc.Html
+
+@model IEnumerable<MiseEnApplicationASP.Models.Utilisateurs>
+
+<h2>List</h2>
+
+@Html.Grid(Model).Columns(columns =>
+
+
+{
+    columns.Add(u => u.Nom).Filterable(true);
+    columns.Add(u => u.Prenom).Titled("Test rename colums");
+    columns.Add(u => u.Age);
+
+    columns.Add()
+        .Encoded(false)
+        .Sanitized(false)
+      .RenderValueAs(p => Html.ActionLink("Editer", "Edit", new { id = p.id }));
+
+
+    columns.Add()
+        .Encoded(false)
+        .Sanitized(false)
+       .RenderValueAs(p => Html.ActionLink("Supprimer", "Delete", new { id = p.id }));
+
+})
